@@ -1,0 +1,686 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+}
+
+                                      /*INICIO*/
+.bodyIndex{
+    display: grid ;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px 800px 1fr 400px;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header" 
+                         "main   main   main   main"
+                         "footer footer footer footer";
+
+}
+/*navegador*/
+
+.navegador{
+    grid-area: nav;
+    background-color:rgb(3, 47, 97) ;
+    top: 0;
+    border-bottom: solid 1px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 64px;
+    margin: 10px;
+
+}
+.navegador .fa-bars{
+    display: none;
+}
+.navegador ul{
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navegador ul li a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    padding: 30px;
+}
+
+
+/*header*/
+.encabezado{
+    grid-area: header;
+    background-image:url(../img/headerIndex.jpg) ;
+    background-size: cover;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    margin: 200px;
+    margin-top: -0px;
+    margin-bottom: -10px;
+    align-content: center;
+       
+
+}
+
+/*main*/
+main{
+    grid-area: main;
+}
+.padre{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 80px;      
+}
+
+.baseTeorica{
+    width: 300px;
+    border: solid 2px;
+    padding: 10px;
+    border-radius: 8px;
+    margin: 10px;
+    background-color:rgb(3, 47, 97);
+    
+
+}
+.tituloValores{
+    margin: 10px;
+    font-size: 40px;
+    color: white;
+}
+.descMision{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.descValores{
+    margin: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.sobreMetalurgica{
+    background-color: rgb(3, 47, 97);
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;
+    
+}
+.tituloSobreMetalurgica{
+    margin: 30px;
+    padding: 10px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+.textoSobreMetalurgica{
+    padding: 150px;
+    width: 1300px;
+    font-size: 20px;
+    justify-content: end;
+    text-align: center;
+    color:white;
+}
+
+.imgLogo{
+    width: 300px;
+    margin: auto;
+    padding: 10px;       
+}
+
+.titulo__trabajarConmigo{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 200px;
+}
+.porqueTrabajarConmigo{
+    margin: 100px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+.imgTrabajarConNosotros{
+    box-shadow: 0px 1px 20px 5px rgba(0,0,0,0.5);
+    object-fit: cover;
+    margin: auto;
+    
+}
+.imgTrabajarConNosotros2{
+    display: none;
+}
+.desc__trabajarConmigo{
+    padding: 50px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    box-shadow: 0px 1px 20px 5px rgb(3, 47, 97);
+}
+
+/*footer*/
+
+.footer{
+    background-color:rgb(3, 47, 97);
+    margin-top: 100px;
+    margin-bottom: 0px;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    grid-area: footer;
+}
+
+.accesos{
+    color:white;
+    padding: 20px;
+    margin-left: 20px;
+    
+}
+.tituloAccesos{
+    padding: 20px;
+}
+.descFooter{
+    margin-top: 50px;
+    margin-right: 150px;
+}
+
+.accesos ul li a{
+    color: white;    
+}
+.descFooter ul a{
+    color: white;
+    text-decoration: none;
+}
+.accesos li{
+    padding: 5px;
+    font-size: 14px;
+}
+.descFooter li{
+    padding: 5px;
+    font-size: 14px;
+}
+.descFooter a{
+    padding: 5px;
+    
+}
+
+ 
+@media(max-width:1380px){
+    .encabezado{
+        object-fit: cover;
+        margin: 80px;
+        margin-bottom: -20px;
+        background-image: url(../img/headerIndex4.jpg)   
+    }
+} 
+
+
+@media(max-width:1000px){
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    .padre{
+        margin: auto;
+        margin-top: 60px;
+    }
+}
+
+
+@media(max-width:800px){
+    
+    .bodyIndex{
+        display: grid ;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 80px 500px 1fr 400px;
+        grid-template-areas: "nav    nav    nav    nav"
+                             "header header header header" 
+                             "main   main   main   main"
+                             "footer footer footer footer";
+    
+    }
+
+    /*navegador*/
+    .navegador{
+        justify-content: space-between;
+    }
+    .navegador .fa-bars{
+        display: block;
+        color: white;
+        font-size: 30px;
+        padding: 20px;
+    }
+    .navegador .fa-bars:hover + ul{
+        left: 0;
+    }
+    .navegador ul{
+        position: fixed;
+        flex-direction: column;
+        background-color: rgb(3, 47, 97);
+        width: 250px;
+        height: 100vh;
+        justify-content: start;
+        padding-top: 60px ;
+        align-items: center;
+        left: -300px;
+        transition: 0.2s;
+
+    }
+    .navegador ul:hover{
+        left: 0;
+    }
+    /*header*/
+
+    .encabezado{
+        object-fit: cover;
+        margin: 80px;
+        background-image: url(../img/headerIndex2.jpg); 
+        margin-bottom: -80px;  
+    }
+    /*main*/
+    .baseTeorica{
+        height: 400px; 
+        margin-top: 80px;
+          
+    }
+    .padre{
+        display: grid;
+        flex-direction: column;
+        
+    }
+    .tituloValores{
+        font-size: 23px;
+        text-align: center;
+
+    }
+    .descValores{
+        font-size: 18px;
+    }
+    .sobreMetalurgica{
+        flex-direction: column;   
+    }
+    .tituloSobreMetalurgica{
+        font-size: 25px;
+        text-align: center;
+    }
+    .imgLogo{
+        object-fit: cover;
+        width: 300px;
+        padding: 10px;
+        margin: auto;
+    }
+    .textoSobreMetalurgica{
+        font-size: 18px;
+        text-align: start;
+        margin: auto;
+        width: 100%;
+        padding: 80px;
+       
+    }
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    .imgTrabajarConNosotros{
+        margin: auto;
+        object-fit: cover;
+    }
+    /*footer*/
+    .tituloAccesos{
+        font-size: 20px;
+        
+    }
+    .descFooter{
+        margin: auto;
+    }
+}
+
+
+@media(max-width:860px){
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    
+    .padre{
+        margin: auto;
+        margin-top: 50px;
+    }
+}
+
+
+@media(max-width:700px){
+    .imgTrabajarConNosotros{
+        height: 300px;
+        width: 400px;
+        object-fit: cover;
+    }
+
+
+}
+
+ 
+@media(max-width:600px){
+    .encabezado{
+        background-image:url(../img/headerIndex3.jpg);
+        object-fit: cover;
+        margin: 30px;
+    }
+    .imgTrabajarConNosotros2{
+       display: flex;
+       padding: 20px;
+    
+    }
+    .porqueTrabajarConmigo{
+        margin: auto;
+        
+    }
+    .imgTrabajarConNosotros{
+        display: none;
+    }
+    .desc__trabajarConmigo{
+        font-size: 16px;
+        width: 100%;
+        margin: auto;
+        text-align: start;
+        padding: 15px;
+    }
+    .titulo__trabajarConmigo{
+        font-size: 25px;
+    }
+    .tituloSobreMetalurgica{
+        font-size: 25px;
+    }
+
+}  
+
+
+@media(max-width:400px){
+    .encabezado{
+        margin: 0;
+        height: 400px;
+    }
+    .padre{
+        margin-top: -50px;
+    }
+    
+}
+
+
+
+
+                                      /*PRODUCTOS*/
+
+/*main*/
+
+.tituloPaginas{
+    padding: 20px;
+    margin-top: 50px;
+    text-align: center;
+}
+.desc__productos{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    padding: 50px;
+    font-size: 20px;
+    background-color:  rgb(3, 47, 97);
+    color: white;
+    
+}
+.padre__productos{
+    display: flex;
+    justify-content:space-evenly ;
+    flex-direction: row;
+
+}
+
+.producto{
+    width: 450px;
+    border: solid 2px;
+    border-radius: 8px;
+    margin: 10px;
+    margin-bottom: 150px;
+    background-color: rgb(3, 47, 97);
+    text-align: center;
+    color: white;
+    
+}
+
+
+.titulo__producto{
+    margin: 10px;
+    font-size: 30px;
+    
+}
+.desc__producto{
+    margin: 10px;
+    font-size: 18px;
+}
+
+.img__producto{
+    height: 500px;
+    width: 100%;
+}
+.boton__producto{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    color: #2d6aaf;
+    font-size: 25px;
+}
+
+.img__producto2{
+    height: 350px;
+    width: 100%;
+}
+@media(max-width:1100px){
+    .padre__productos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .desc__productos{
+        padding: 30px;
+    }
+   
+}
+@media(max-width:800px){
+    .tituloPaginas{
+        font-size: 25px;
+    }
+    .desc__productos{
+        font-size: 18px;
+        padding: 30px;
+    }
+    .titulo__producto{
+        font-size: 23px;
+    }
+    .desc__producto{
+        font-size: 18px;
+    }
+}
+@media(max-width:650px){
+    .desc__productos{
+        height: 300px;
+    }
+}
+@media(max-width:530px){
+    .desc__productos{
+        height: 350px;
+    }
+}
+@media(max-width:450px){
+    .desc__productos{
+        height: 400px;
+    }
+    .img__producto{
+        height: 400px;
+        width: 100%;
+        margin: auto;
+    }
+    .padre__productos{
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+    .producto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 350px;
+        align-items: center;
+    }
+    .img__producto2{
+        height: 250px;
+        width: 100%;
+    }
+    .titulo__producto{
+        font-size: 18px;
+    }
+    .desc__producto{
+        font-size: 14px;
+    }
+}
+
+
+                                           /*SERVICIOS*/
+
+/*main*/                                          
+.titulo__servicios{
+    margin: 30px;
+    padding: 50px;
+}                                           
+.padre__servicios{
+    display: flex;
+    justify-content:space-evenly ;
+                                         
+ }
+                                        
+.servicio{
+    width: 400px;
+    border: solid 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 150px;
+    background-color: rgb(3, 47, 97);
+    text-align: center;
+    color: white;
+                                            
+}
+
+.titulo__servicio{
+    margin: 10px;
+    text-align: center;
+    padding: 20px;   
+}
+
+.img__servicio{
+    height: 350px;
+    width: 100%;  
+}
+
+
+
+
+                                          /*UBICACION*/
+/*main*/
+.caja{
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: solid 2px;
+    padding: 10px;
+    position: absolute;
+    right: 700px;
+    top: 200px;
+    background-color:rgb(3, 47, 97) ;
+    color: white;
+    margin-top: 35px;
+}
+
+
+
+
+                                          /*CONTACTO*/
+/*main*/
+
+.formulario{
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color:rgb(3, 47, 97)  ;
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px 5px rgba(0,0,0,0.5);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 30px 1fr 50px;
+    grid-template-areas:"titulo   titulo"
+                        "nombre   apellido"
+                        "numero   email"
+                        "ciudad   provincia"
+                        "servicio servicio"
+                        "msj      msj"
+                        "boton    boton";
+}
+.formulario h2:nth-child(1){
+    grid-area: titulo;
+    color: white;
+}
+.formulario label:nth-child(2){
+    grid-area: nombre;
+}
+.formulario label:nth-child(3){
+    grid-area: apellido;
+}
+.formulario label:nth-child(4){
+    grid-area: numero;
+}
+.formulario label:nth-child(5){
+    grid-area: email;
+}
+.formulario label:nth-child(6){
+    grid-area:ciudad;
+}
+.formulario  label:nth-child(7){
+    grid-area: provincia;
+}
+.formulario select:nth-child(8){
+    grid-area: servicio;
+    text-align: center;
+}
+.formulario label:nth-child(9){
+    grid-area: msj;
+}
+.formulario button:nth-child(10){
+    grid-area: boton;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;      
+}
+.formulario label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+}
+.formulario label input , .formulario label textarea{
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid white;
+    outline: none;
+
+}
+.formulario label input{
+    color: white;
+}
