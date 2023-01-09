@@ -6,14 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
     <link rel="shortcut icon" href="../asset/img/logoEmpresa.jpeg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../asset/css/style.css">
-</head>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="../asset/css/bootstrap.min.css">
+</head> 
+
 <body>
-   
-   
-   
+      
     <nav class="navegador">
-        <img class="logo" src="../asset/img/logoEmpresa.jpeg" alt="Imagen Logo">
+        <i class="fa-solid fa-bars"></i>
         <ul>
             <li><a href="../index.html">INICIO</a></li>
             <li><a href="./productos.html">PRODUCTOS</a></li>
@@ -21,49 +24,37 @@
             <li><a href="./ubicacion.html">UBICACIÓN</a></li>
             <li><a href="./contacto.html">CONTACTO</a></li>
         </ul>
-
-
+        <img class="logo" src="../asset/img/logoEmpresa.jpeg" alt="Imagen Logo">
     </nav>
-    
-
-
 
     <main>
         <div>
             <h1 class="tituloPaginas">SERVICIOS</h1>
-            <div class="padre__servicios">
-               
-                <div class="servicio">
-                    <img class="img__servicio" src="../asset/img/mantenimientoElectrico.jpg" alt="Imagen Servicio">
+            <div class="padre d-flex flex-wrap justify-content-around align-items-center">
+                <div class="servicio m-3 align-items-center">
+                    <img class="img__servicio " src="../asset/img/mantenimientoElectrico.jpg" alt="Imagen Servicio">
                     <h3 class="titulo__servicio">SERVICIO - MANTENIMIENTO ELECTRICO</h3>  
                 </div>
-                <div class="servicio">
+                <div class="servicio m-3">
                     <img class="img__servicio" src="../asset/img/mantenimientoDeMaquinasAgricolas.jpg" alt="Imagen Servicio">
                     <h3 class="titulo__servicio">SERVICIO- MANTENIMIENTO Y REPARACION DE MAQUINAS AGRICOLA</h3>
                 </div>
-                <div class="servicio">
+                <div class="servicio m-3">
                     <img class="img__servicio" src="../asset/img/WhatsApp Image 2022-11-22 at 11.35.25 AM (2).jpeg" alt="Imagen Servicio">
-                    <h3 class="titulo__servicio">FABRICACION DE MONTAJES DE TECHOS, TINGLADOS, GALPONES</h3>
-                    
-                    
+                    <h3 class="titulo__servicio">FABRICACION DE MONTAJES DE TECHOS, TINGLADOS, GALPONES</h3>   
                 </div>
             </div>
-          
         </div>
-
     </main>
 
-
-
-
-    <footer class="footer">
+    <footer  class="footer">
         <div class="accesos">
             <h2 class="tituloAccesos">Accesos Rapidos</h2>
             <ul>
                 <li><a href="../index.html">INICIO</a></li>
                 <li><a href="./productos.html">PRODUCTOS</a></li>
                 <li><a href="./servicios.html">SERVICIOS</a></li> 
-                <li><a href="./ubicacion.html">UBICACIÓN</a></li>                
+                <li><a href="./ubicacion.html">UBICACIÓN</a></li>              
                 <li><a href="./contacto.html">CONTACTO</a></li> 
             </ul>
         </div>
@@ -72,13 +63,22 @@
                 <li>Alejandro Gomez</li>
                 <li>3585-408251/3585-404589</li>
                 <li>Jose Marmol 756 - Córdoba - Adelia Maria</li>
-                <a href=" https://www.instagram.com/invites/contact/?i=j5hw18coi2oc&utm_content=plkasr9">Instagram</a>
-                
+                <a href=" https://www.instagram.com/invites/contact/?i=j5hw18coi2oc&utm_content=plkasr9"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/alejandrohoracio.gomez.5?mibextid=LQQJ4d"><i class="fa-brands fa-facebook"></i></a>
+                <a href="Ale Gómez.vcf"><i class="fa-brands fa-whatsapp"></i></a>
             </ul>        
-        </div>
+        </div>  
     </footer>
 
-
-    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                duration: 1000
+            }
+        );
+    </script>    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="../asset/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

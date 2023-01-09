@@ -50,19 +50,14 @@
 
 
 /*header*/
-.encabezado{
-    grid-area: header;
-    background-image:url(../img/headerIndex.jpg) ;
-    background-size: cover;
-    object-fit: cover;
-    background-repeat: no-repeat;
-    margin: 200px;
-    margin-top: -0px;
-    margin-bottom: -10px;
-    align-content: center;
-       
 
+
+header{
+    margin: 100px;
+    grid-area: header;    
 }
+
+
 
 /*main*/
 main{
@@ -211,11 +206,11 @@ main{
 
  
 @media(max-width:1380px){
-    .encabezado{
-        object-fit: cover;
+    header{
+        
         margin: 80px;
         margin-bottom: -20px;
-        background-image: url(../img/headerIndex4.jpg)   
+         
     }
 } 
 
@@ -228,22 +223,14 @@ main{
         margin: auto;
         margin-top: 60px;
     }
+    header{
+        margin: 70px;
+        margin-bottom: -20px;
+
+    }
 }
 
-
-@media(max-width:800px){
-    
-    .bodyIndex{
-        display: grid ;
-        grid-template-columns: repeat(4,1fr);
-        grid-template-rows: 80px 500px 1fr 400px;
-        grid-template-areas: "nav    nav    nav    nav"
-                             "header header header header" 
-                             "main   main   main   main"
-                             "footer footer footer footer";
-    
-    }
-
+@media(max-width:831px){
     /*navegador*/
     .navegador{
         justify-content: space-between;
@@ -273,12 +260,30 @@ main{
     .navegador ul:hover{
         left: 0;
     }
+
+}
+
+
+@media(max-width:800px){
+    
+    .bodyIndex{
+        display: grid ;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: 80px 500px 1fr 400px;
+        grid-template-areas: "nav    nav    nav    nav"
+                             "header header header header" 
+                             "main   main   main   main"
+                             "footer footer footer footer";
+    
+    }
+
+    
     /*header*/
 
     .encabezado{
         object-fit: cover;
         margin: 80px;
-        background-image: url(../img/headerIndex2.jpg); 
+        
         margin-bottom: -80px;  
     }
     /*main*/
@@ -364,7 +369,7 @@ main{
  
 @media(max-width:600px){
     .encabezado{
-        background-image:url(../img/headerIndex3.jpg);
+        
         object-fit: cover;
         margin: 30px;
     }
@@ -419,6 +424,7 @@ main{
     padding: 20px;
     margin-top: 50px;
     text-align: center;
+    color: black;
 }
 .desc__productos{
     width: 100%;
@@ -587,6 +593,48 @@ main{
     height: 350px;
     width: 100%;  
 }
+@media(max-width:420px){
+    .titulo__servicios{
+        margin: 20px;
+        padding: 40px;
+    }                                           
+    .padre__servicios{
+        display: flex;
+        justify-content:space-evenly ;
+                                             
+     }
+                                            
+    .servicio{
+        width: 300px;
+        border: solid 2px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 10px;
+        margin-bottom: 100px;
+        background-color: rgb(3, 47, 97);
+        text-align: center;
+        color: white;
+                                                
+    }
+    
+    .titulo__servicio{
+        margin: 10px;
+        text-align: center;
+        padding: 20px;   
+    }
+    
+    .img__servicio{
+        height: 250px;
+        width: 100%;  
+    }
+
+}
+@media(max-width:400px){
+    .padre{
+        margin-top: 20px;
+    }
+}
+
 
 
 
@@ -599,14 +647,15 @@ main{
     margin: 10px;
     border: solid 2px;
     padding: 10px;
-    position: absolute;
     right: 700px;
     top: 200px;
     background-color:rgb(3, 47, 97) ;
     color: white;
     margin-top: 35px;
 }
-
+.caja p{
+    padding: 5px;
+}
 
 
 
