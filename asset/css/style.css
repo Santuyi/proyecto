@@ -17,6 +17,10 @@
                          "footer footer footer footer";
 
 }
+.row,.container,.container-fluid{
+    margin: 0;
+    padding: 0;
+}
 /*navegador*/
 
 .navegador{
@@ -53,7 +57,7 @@
 
 
 header{
-    margin: 100px;
+    margin: auto;
     grid-area: header;    
 }
 
@@ -207,10 +211,7 @@ main{
  
 @media(max-width:1380px){
     header{
-        
-        margin: 80px;
-        margin-bottom: -20px;
-         
+        margin: auto;  
     }
 } 
 
@@ -224,8 +225,8 @@ main{
         margin-top: 60px;
     }
     header{
-        margin: 70px;
-        margin-bottom: -20px;
+        margin: auto;
+      
 
     }
 }
@@ -234,6 +235,7 @@ main{
     /*navegador*/
     .navegador{
         justify-content: space-between;
+
     }
     .navegador .fa-bars{
         display: block;
@@ -255,7 +257,7 @@ main{
         align-items: center;
         left: -300px;
         transition: 0.2s;
-
+        
     }
     .navegador ul:hover{
         left: 0;
@@ -276,31 +278,18 @@ main{
                              "footer footer footer footer";
     
     }
-
-    
-    /*header*/
-
-    .encabezado{
-        object-fit: cover;
-        margin: 80px;
-        
-        margin-bottom: -80px;  
-    }
     /*main*/
     .baseTeorica{
-        height: 400px; 
-        margin-top: 80px;
-          
+        height: 450px; 
+        margin-top: 80px;    
     }
     .padre{
         display: grid;
-        flex-direction: column;
-        
+        flex-direction: column; 
     }
     .tituloValores{
         font-size: 23px;
         text-align: center;
-
     }
     .descValores{
         font-size: 18px;
@@ -324,7 +313,6 @@ main{
         margin: auto;
         width: 100%;
         padding: 80px;
-       
     }
     .porqueTrabajarConmigo{
         flex-direction: column;
@@ -335,14 +323,12 @@ main{
     }
     /*footer*/
     .tituloAccesos{
-        font-size: 20px;
-        
+        font-size: 20px; 
     }
     .descFooter{
         margin: auto;
     }
 }
-
 
 @media(max-width:860px){
     .porqueTrabajarConmigo{
@@ -355,7 +341,6 @@ main{
     }
 }
 
-
 @media(max-width:700px){
     .imgTrabajarConNosotros{
         height: 300px;
@@ -365,22 +350,14 @@ main{
 
 
 }
-
  
 @media(max-width:600px){
-    .encabezado{
-        
-        object-fit: cover;
-        margin: 30px;
-    }
     .imgTrabajarConNosotros2{
        display: flex;
        padding: 20px;
-    
     }
     .porqueTrabajarConmigo{
-        margin: auto;
-        
+        margin: auto;   
     }
     .imgTrabajarConNosotros{
         display: none;
@@ -398,19 +375,12 @@ main{
     .tituloSobreMetalurgica{
         font-size: 25px;
     }
-
 }  
 
-
 @media(max-width:400px){
-    .encabezado{
-        margin: 0;
-        height: 400px;
-    }
     .padre{
         margin-top: -50px;
-    }
-    
+    } 
 }
 
 
@@ -563,13 +533,7 @@ main{
 .titulo__servicios{
     margin: 30px;
     padding: 50px;
-}                                           
-.padre__servicios{
-    display: flex;
-    justify-content:space-evenly ;
-                                         
- }
-                                        
+}                                                                                 
 .servicio{
     width: 400px;
     border: solid 2px;
@@ -582,13 +546,11 @@ main{
     color: white;
                                             
 }
-
 .titulo__servicio{
     margin: 10px;
     text-align: center;
     padding: 20px;   
 }
-
 .img__servicio{
     height: 350px;
     width: 100%;  
@@ -597,13 +559,7 @@ main{
     .titulo__servicios{
         margin: 20px;
         padding: 40px;
-    }                                           
-    .padre__servicios{
-        display: flex;
-        justify-content:space-evenly ;
-                                             
-     }
-                                            
+    }                                                                          
     .servicio{
         width: 300px;
         border: solid 2px;
@@ -616,18 +572,15 @@ main{
         color: white;
                                                 
     }
-    
     .titulo__servicio{
         margin: 10px;
         text-align: center;
         padding: 20px;   
     }
-    
     .img__servicio{
         height: 250px;
         width: 100%;  
     }
-
 }
 @media(max-width:400px){
     .padre{
@@ -647,14 +600,15 @@ main{
     margin: 10px;
     border: solid 2px;
     padding: 10px;
-    right: 700px;
-    top: 200px;
     background-color:rgb(3, 47, 97) ;
     color: white;
-    margin-top: 35px;
+    
 }
 .caja p{
     padding: 5px;
+}
+iframe{
+    width: 100%;
 }
 
 
