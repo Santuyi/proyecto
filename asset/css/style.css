@@ -5,6 +5,11 @@
     font-family: 'Roboto', sans-serif;
 
 }
+.row,.container,.container-fluid{
+    margin: 0;
+    padding: 0;
+}
+button
 
                                       /*INICIO*/
 .bodyIndex{
@@ -15,21 +20,17 @@
                          "header header header header" 
                          "main   main   main   main"
                          "footer footer footer footer";
+}
 
-}
-.row,.container,.container-fluid{
-    margin: 0;
-    padding: 0;
-}
 /*navegador*/
 
 .navegador{
     grid-area: nav;
     background-color:rgb(3, 47, 97) ;
-    top: 0;
     border-bottom: solid 1px;
     display: flex;
     justify-content: space-between;
+    height: 80px;
 }
 .logo{
     width: 64px;
@@ -43,6 +44,8 @@
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
 }
 
 .navegador ul li a{
@@ -58,7 +61,7 @@
 
 header{
     margin: auto;
-    grid-area: header;    
+    grid-area: header;  
 }
 
 
@@ -136,7 +139,7 @@ main{
     padding: 20px;
     font-size: 30px;
     text-align: center;
-    margin-top: 200px;
+    margin-top: 130px;
 }
 .porqueTrabajarConmigo{
     margin: 100px;
@@ -235,7 +238,7 @@ main{
     /*navegador*/
     .navegador{
         justify-content: space-between;
-
+        
     }
     .navegador .fa-bars{
         display: block;
@@ -257,7 +260,7 @@ main{
         align-items: center;
         left: -300px;
         transition: 0.2s;
-        
+        z-index: 1px;
     }
     .navegador ul:hover{
         left: 0;
@@ -422,11 +425,8 @@ main{
     margin-bottom: 150px;
     background-color: rgb(3, 47, 97);
     text-align: center;
-    color: white;
-    
+    color: white;   
 }
-
-
 .titulo__producto{
     margin: 10px;
     font-size: 30px;
@@ -442,15 +442,16 @@ main{
     width: 100%;
 }
 .boton__producto{
-    padding: 10px;
-    margin: 10px;
-    border: none;
-    background-color: white;
-    border-radius: 8px;
-    color: #2d6aaf;
-    font-size: 25px;
+    border: 0;
+    border-radius: 5px;
+    font-size: 18px;
+    margin: 10px;  
+    padding: 4px;
 }
 
+.boton__producto:hover{
+    background-color: rgba(255, 255, 255, 0.788);
+}
 .img__producto2{
     height: 350px;
     width: 100%;
@@ -491,6 +492,11 @@ main{
         height: 350px;
     }
 }
+@media(max-width:470px){
+    .desc__productos{
+        height: 400px;
+    }
+}
 @media(max-width:450px){
     .desc__productos{
         height: 400px;
@@ -525,6 +531,17 @@ main{
         font-size: 14px;
     }
 }
+@media(max-width:430px){
+    .desc__productos{
+        height: 450px;
+    }
+}
+@media(max-width:390px){
+    .desc__productos{
+        height: 500px;
+    }
+}
+
 
 
                                            /*SERVICIOS*/
@@ -638,6 +655,7 @@ iframe{
 .formulario h2:nth-child(1){
     grid-area: titulo;
     color: white;
+    text-align: center;
 }
 .formulario label:nth-child(2){
     grid-area: nombre;
@@ -671,6 +689,9 @@ iframe{
     font-size: 18px;
     margin: 10px;      
 }
+.formulario button:nth-child(10):hover{
+    background-color: rgba(255, 255, 255, 0.788);
+}
 .formulario label{
     display: flex;
     flex-direction: column;
@@ -686,4 +707,57 @@ iframe{
 }
 .formulario label input{
     color: white;
+}
+@media(max-width:550px){
+    .formulario{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px 1fr 50px;
+        grid-template-areas:"titulo   "
+                            "nombre "  
+                            "apellido"
+                            "numero "
+                            "email"
+                            "ciudad "
+                            "provincia"
+                            "servicio"
+                            "msj"
+                            "boton";
+    }
+    .formulario h2:nth-child(1){
+        grid-area: titulo;
+    }
+    .formulario label:nth-child(2){
+        grid-area: nombre;
+    }
+    .formulario label:nth-child(3){
+        grid-area: apellido;
+    }
+    .formulario label:nth-child(4){
+        grid-area: numero;
+    }
+    .formulario label:nth-child(5){
+        grid-area: email;
+    }
+    .formulario label:nth-child(6){
+        grid-area:ciudad;
+    }
+    .formulario  label:nth-child(7){
+        grid-area: provincia;
+    }
+    .formulario select:nth-child(8){
+        grid-area: servicio;
+    }
+    .formulario label:nth-child(9){
+        grid-area: msj;
+    }
+    .formulario button:nth-child(10){
+        grid-area: boton;     
+    }   
+}
+@media(max-width:460px){
+    .formulario select:nth-child(8){
+        width: 300px; 
+    }
 }
