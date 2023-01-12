@@ -1,0 +1,23 @@
+.bodyIndex{
+    display: grid ;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 80px 800px 1fr 400px;
+    grid-template-areas: "nav    nav    nav    nav"
+                         "header header header header" 
+                         "main   main   main   main"
+                         "footer footer footer footer";
+}
+header{
+    margin: auto;
+    grid-area: header;  
+}
+@media(max-width:1380px){
+    header{
+        margin: auto;  
+    }
+} 
+@media(max-width:1000px){
+    header{
+        margin: auto; 
+    }
+}

@@ -1,0 +1,189 @@
+main{
+    grid-area: main;
+    .padre{
+        display: flex;
+        justify-content: space-evenly;
+        margin: auto;   
+        .baseTeorica{
+            width: 300px;
+            border: solid 2px;
+            padding: 10px;
+            border-radius: 8px;
+            margin: 10px;
+            background-color:rgb(3, 47, 97);
+            h2{
+                margin: 10px;
+                font-size: 40px;
+                color: white;
+            }
+            p{
+                margin: 10px;
+                font-size: 20px;
+                color: white;
+            }
+            ul{
+                margin: 10px;
+                font-size: 20px;
+                color: white;
+            }
+        }   
+    }
+}
+.sobreMetalurgica{
+    background-color: rgb(3, 47, 97);
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-direction: row;  
+    p{
+        padding: 150px;
+        width: 1300px;
+        font-size: 20px;
+        justify-content: end;
+        text-align: center;
+        color:white;
+    }
+    img{
+        width: 300px;
+        margin: auto;
+        padding: 10px;       
+    } 
+}
+.tituloSobreMetalurgica{
+    margin: 30px;
+    padding: 10px;
+    margin-top: 150px;
+    text-align: center;
+    font-size: 30px;   
+}
+.titulo__trabajarConmigo{
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 130px;
+}
+.porqueTrabajarConmigo{
+    margin: 100px;
+    display: flex;
+    justify-content: space-between;
+    .imgTrabajarConNosotros{
+        box-shadow: 0px 1px 20px 5px rgba(0,0,0,0.5);
+        object-fit: cover;
+        margin: auto;   
+    }
+    .imgTrabajarConNosotros2{
+        display: none;
+    }
+    p{
+        padding: 50px;
+        margin: auto;
+        text-align: center;
+        font-size: 20px;
+        box-shadow: 0px 1px 20px 5px rgb(3, 47, 97);
+    }   
+}
+@media(max-width:1000px){
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    .padre{
+        margin: auto;
+        margin-top: 60px;
+    }
+   
+}
+@media(max-width:800px){
+    /*main*/
+    main{
+        .padre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .baseTeorica{
+                height: 470px; 
+                margin-top: 80px;   
+                > h2{
+                    font-size: 23px;
+                    text-align: center;
+                } 
+                > p ,ul{
+                    font-size: 18px;
+                }
+            }    
+        }
+    }
+    .sobreMetalurgica{
+        flex-direction: column;  
+        img{
+            object-fit: cover;
+            width: 300px;
+            padding: 10px;
+            margin: auto;
+        } 
+        p{
+            font-size: 18px;
+            text-align: start;
+            margin: auto;
+            width: 100%;
+            padding: 80px;
+        }
+    }
+    .tituloSobreMetalurgica{
+        font-size: 25px;
+        text-align: center;
+    }
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    .imgTrabajarConNosotros{
+        margin: auto;
+        object-fit: cover;
+    }
+}
+@media(max-width:860px){
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+    .padre{
+        margin: auto;
+        margin-top: 50px;
+    }
+}
+@media(max-width:700px){
+    .imgTrabajarConNosotros{
+        height: 300px;
+        width: 400px;
+        object-fit: cover;
+    }
+}
+@media(max-width:600px){
+    .porqueTrabajarConmigo{
+        margin: auto;   
+        .imgTrabajarConNosotros{
+            display: none;
+        }
+        .imgTrabajarConNosotros2{
+            display: flex;
+            padding: 20px;
+        }
+        p{
+            font-size: 16px;
+            width: 100%;
+            margin: auto;
+            text-align: start;
+            padding: 15px;
+        }
+    }
+    .titulo__trabajarConmigo{
+        font-size: 25px;
+    }
+    .tituloSobreMetalurgica{
+        font-size: 25px;
+    }
+}  
+@media(max-width:400px){
+    .padre{
+        margin-top: -50px;
+    } 
+}

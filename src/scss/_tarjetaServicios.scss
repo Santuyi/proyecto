@@ -1,0 +1,47 @@
+.servicio{
+    width: 400px;
+    border: solid 2px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    margin-bottom: 150px;
+    background-color: rgb(3, 47, 97);
+    text-align: center;
+    color: white;
+    img{
+        height: 350px;
+        width: 100%;  
+    }
+    h3{
+        margin: 10px;
+        text-align: center;
+        padding: 20px;   
+    }                                        
+}
+@media(max-width:420px){                                                                        
+    .servicio{
+        width: 300px;
+        border: solid 2px;
+        border-radius: 8px;
+        overflow: hidden;
+        margin: 10px;
+        margin-bottom: 100px;
+        background-color: rgb(3, 47, 97);
+        text-align: center;
+        color: white;
+        img{
+            height: 250px;
+            width: 100%;  
+        }
+        h3{
+            margin: 10px;
+            text-align: center;
+            padding: 20px;   
+        }
+    }                                        
+}   
+@media(max-width:400px){
+    .padre{
+        margin-top: 20px;
+    }
+}

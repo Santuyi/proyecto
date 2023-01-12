@@ -1,0 +1,132 @@
+.formulario{
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background-color:rgb(3, 47, 97)  ;
+    border-radius: 10px;
+    box-shadow: 0px 1px 20px 5px rgba(0,0,0,0.5);
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 30px 1fr 50px;
+    grid-template-areas:"titulo   titulo"
+                        "nombre   apellido"
+                        "numero   email"
+                        "ciudad   provincia"
+                        "servicio servicio"
+                        "msj      msj"
+                        "boton    boton";
+    h2:nth-child(1){
+        grid-area: titulo;
+        color: white;
+        text-align: center;
+    }
+    label{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: white;
+        &:nth-child(2){
+            grid-area: nombre;
+        }
+        &:nth-child(3){
+            grid-area: apellido;
+        }
+        &:nth-child(4){
+            grid-area: numero;
+        }
+        &:nth-child(5){
+            grid-area: email;
+        }
+        &:nth-child(6){
+            grid-area:ciudad;
+        }
+        &:nth-child(7){
+            grid-area: provincia;
+        }
+        &:nth-child(9){
+            grid-area: msj;
+        }
+        input, textarea{
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid white;
+            outline: none;
+        }
+        input{
+            color: white;
+        }
+    }
+    select:nth-child(8){
+        grid-area: servicio;
+        text-align: center;
+    }
+    button:nth-child(10){
+        grid-area: boton;
+        border: 0;
+        border-radius: 5px;
+        font-size: 18px;
+        margin: 10px;
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.788);
+        }      
+    }                    
+}
+@media(max-width:550px){
+    .formulario{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 30px 1fr 50px;
+        grid-template-areas:"titulo   "
+                            "nombre "  
+                            "apellido"
+                            "numero "
+                            "email"
+                            "ciudad "
+                            "provincia"
+                            "servicio"
+                            "msj"
+                            "boton";
+    h2:nth-child(1){
+        grid-area: titulo;
+    }
+    label{
+        &:nth-child(2){
+            grid-area: nombre;
+        }
+        &:nth-child(3){
+            grid-area: apellido;
+        }
+        &:nth-child(4){
+            grid-area: numero;
+        }
+        &:nth-child(5){
+            grid-area: email;
+        }
+        &:nth-child(6){
+            grid-area:ciudad;
+        }
+        &:nth-child(7){
+            grid-area: provincia;
+        }
+        &:nth-child(9){
+            grid-area: msj;
+        }
+    }
+    select:nth-child(8){
+        grid-area: servicio;
+    }
+    button:nth-child(10){
+        grid-area: boton; 
+        &:hover{
+            background-color: rgba(255, 255, 255, 0.788);
+        }      
+    }  
+    }   
+}
+@media(max-width:460px){
+    .formulario select:nth-child(8){
+        width: 300px; 
+    }
+}
