@@ -1,13 +1,7 @@
 .servicio{
     width: 400px;
-    border: solid 2px;
-    border-radius: 8px;
     overflow: hidden;
-    margin: 10px;
-    margin-bottom: 150px;
-    background-color: rgb(3, 47, 97);
-    text-align: center;
-    color: white;
+    @extend %tarjetaSyP;
     img{
         height: 350px;
         width: 100%;  
@@ -26,9 +20,9 @@
         overflow: hidden;
         margin: 10px;
         margin-bottom: 100px;
-        background-color: rgb(3, 47, 97);
+        background-color: $colorPrincipal;
         text-align: center;
-        color: white;
+        color: $colorSecundario;
         img{
             height: 250px;
             width: 100%;  

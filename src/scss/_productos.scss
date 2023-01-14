@@ -1,8 +1,5 @@
 .tituloPaginas{
-    padding: 20px;
-    margin-top: 50px;
-    text-align: center;
-    color: black;
+    @extend %tituloPaginas;
 }
 .desc__productos{
     width: 100%;
@@ -11,8 +8,8 @@
     margin-top: 50px;
     padding: 50px;
     font-size: 20px;
-    background-color:  rgb(3, 47, 97);
-    color: white;  
+    background-color:  $colorPrincipal;
+    color: $colorSecundario;  
 }
 @media(max-width:1100px){
     .desc__productos{

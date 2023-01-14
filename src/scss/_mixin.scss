@@ -1,0 +1,9 @@
+@mixin caja($color,$background){
+    width: 400px;
+    height: 200px;
+    margin: 10px;
+    border: solid 2px;
+    padding: 10px;
+    background-color:$background ;
+    color: $color;
+}

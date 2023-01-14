@@ -1,6 +1,6 @@
 .navegador{
     grid-area: nav;
-    background-color:rgb(3, 47, 97) ;
+    background-color:$colorPrincipal ;
     border-bottom: solid 1px;
     display: flex;
     justify-content: space-between;
@@ -16,7 +16,7 @@
         margin: 0;
         li a{
             display: flex;
-            color: white;
+            color: $colorSecundario;
             text-decoration: none;
             padding: 30px;
         }
@@ -32,7 +32,7 @@
     }
     .navegador .fa-bars{
         display: block;
-        color: white;
+        color: $colorSecundario;
         font-size: 30px;
         padding: 20px;
     }
@@ -42,7 +42,7 @@
     .navegador ul{
         position: fixed;
         flex-direction: column;
-        background-color: rgb(3, 47, 97);
+        background-color: $colorPrincipal;
         width: 250px;
         height: 100vh;
         justify-content: start;

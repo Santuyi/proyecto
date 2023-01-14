@@ -2,7 +2,7 @@
     padding: 30px;
     max-width: 1000px;
     margin: 20px auto;
-    background-color:rgb(3, 47, 97)  ;
+    background-color: $colorPrincipal ;
     border-radius: 10px;
     box-shadow: 0px 1px 20px 5px rgba(0,0,0,0.5);
     display: grid;
@@ -16,61 +16,54 @@
                         "servicio servicio"
                         "msj      msj"
                         "boton    boton";
-    h2:nth-child(1){
-        grid-area: titulo;
-        color: white;
-        text-align: center;
+    @each $clave , $valor in (1:titulo,8:servicio,10:boton){
+        @if($clave == 1){
+            h2:nth-child(#{$clave}){
+                grid-area: $valor;
+                color: $colorSecundario;
+                text-align: center;
+            }
+        }
+        @else if ($clave == 8){
+            select:nth-child(#{$clave}){
+                grid-area: $valor;
+                text-align: center;
+            }
+        }
+        @else{
+            button:nth-child(#{$clave}){
+                grid-area: $valor;
+                border: 0;
+                border-radius: 5px;
+                font-size: 18px;
+                margin: 10px;
+                &:hover{
+                    background-color: rgba(255, 255, 255, 0.788);
+                }      
+            }
+        }
     }
     label{
+        @each $clave , $valor in (2:nombre,3:apellido,4:numero,5:email,6:ciudad,7:provincia,9:msj){
+            &:nth-child(#{$clave}){
+                grid-area: $valor;
+            }
+        }
         display: flex;
         flex-direction: column;
         gap: 10px;
-        color: white;
-        &:nth-child(2){
-            grid-area: nombre;
-        }
-        &:nth-child(3){
-            grid-area: apellido;
-        }
-        &:nth-child(4){
-            grid-area: numero;
-        }
-        &:nth-child(5){
-            grid-area: email;
-        }
-        &:nth-child(6){
-            grid-area:ciudad;
-        }
-        &:nth-child(7){
-            grid-area: provincia;
-        }
-        &:nth-child(9){
-            grid-area: msj;
-        }
+        color: $colorSecundario;
         input, textarea{
             background-color: transparent;
             border: 0;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid $colorSecundario;
             outline: none;
-        }
-        input{
             color: white;
         }
-    }
-    select:nth-child(8){
-        grid-area: servicio;
-        text-align: center;
-    }
-    button:nth-child(10){
-        grid-area: boton;
-        border: 0;
-        border-radius: 5px;
-        font-size: 18px;
-        margin: 10px;
-        &:hover{
-            background-color: rgba(255, 255, 255, 0.788);
-        }      
-    }                    
+        input{
+            color: $colorSecundario;
+        }
+    }                      
 }
 @media(max-width:550px){
     .formulario{

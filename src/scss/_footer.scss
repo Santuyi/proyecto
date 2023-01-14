@@ -1,21 +1,21 @@
 .footer{
-    background-color:rgb(3, 47, 97);
+    background-color: $colorPrincipal;
     margin-top: 100px;
     margin-bottom: 0px;
-    color: white;
+    color: $colorSecundario;
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
     grid-area: footer;
     .accesos{
-        color:white;
+        color:$colorSecundario;
         padding: 20px;
         margin-left: 20px;
         h2{
             padding: 20px;
         }
         ul li a{
-            color: white;    
+            color: $colorSecundario;    
         }
         li{
             padding: 5px;
@@ -26,7 +26,7 @@
         margin-top: 50px;
         margin-right: 150px;
         ul a{
-            color: white;
+            color: $colorSecundario;
             text-decoration: none;
         }
         li{
