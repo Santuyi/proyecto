@@ -29,7 +29,10 @@ header {
 }
 @media (max-width: 1000px) {
   header {
-    margin: auto;
+    margin: 0;
+  }
+  header .container {
+    --bs-gutter-x: 0rem;
   }
 }
 .navegador {
@@ -95,12 +98,13 @@ header {
 main {
   grid-area: main;
 }
-main .padre {
+main .padreIndex {
   display: flex;
   justify-content: space-evenly;
   margin: auto;
+  gap: 50px;
 }
-main .padre .baseTeorica {
+main .padreIndex .baseTeorica {
   width: 300px;
   border: solid 2px;
   padding: 10px;
@@ -108,17 +112,17 @@ main .padre .baseTeorica {
   margin: 10px;
   background-color: rgb(3, 47, 97);
 }
-main .padre .baseTeorica h2 {
+main .padreIndex .baseTeorica h2 {
   margin: 10px;
   font-size: 40px;
   color: white;
 }
-main .padre .baseTeorica p {
+main .padreIndex .baseTeorica p {
   margin: 10px;
   font-size: 20px;
   color: white;
 }
-main .padre .baseTeorica ul {
+main .padreIndex .baseTeorica ul {
   margin: 10px;
   font-size: 20px;
   color: white;
@@ -187,29 +191,37 @@ main .padre .baseTeorica ul {
   .porqueTrabajarConmigo {
     flex-direction: column;
   }
-  .padre {
-    margin: auto;
-    margin-top: 60px;
+}
+@media (max-width: 980px) {
+  main .padreIndex {
+    margin-top: -150px;
   }
 }
-@media (max-width: 800px) {
-  /*main*/
-  main .padre {
+@media (max-width: 900px) {
+  main .padreIndex {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: -150px;
   }
-  main .padre .baseTeorica {
+  main .padreIndex .baseTeorica {
     height: 470px;
-    margin-top: 80px;
+    margin-top: 0;
   }
-  main .padre .baseTeorica > h2 {
+  main .padreIndex .baseTeorica > h2 {
     font-size: 23px;
     text-align: center;
   }
-  main .padre .baseTeorica > p, main .padre .baseTeorica ul {
+  main .padreIndex .baseTeorica > p, main .padreIndex .baseTeorica ul {
     font-size: 18px;
   }
+}
+@media (max-width: 860px) {
+  .porqueTrabajarConmigo {
+    flex-direction: column;
+  }
+}
+@media (max-width: 800px) {
   .sobreMetalurgica {
     flex-direction: column;
   }
@@ -240,13 +252,9 @@ main .padre .baseTeorica ul {
        object-fit: cover;
   }
 }
-@media (max-width: 860px) {
-  .porqueTrabajarConmigo {
-    flex-direction: column;
-  }
-  .padre {
-    margin: auto;
-    margin-top: 50px;
+@media (max-width: 760px) {
+  main .padreIndex {
+    margin-top: -200px;
   }
 }
 @media (max-width: 700px) {
@@ -281,10 +289,23 @@ main .padre .baseTeorica ul {
   .tituloSobreMetalurgica {
     font-size: 25px;
   }
+  main .padreIndex {
+    margin-top: -250px;
+  }
+}
+@media (max-width: 500px) {
+  main .padreIndex {
+    margin-top: -300px;
+  }
+}
+@media (max-width: 450px) {
+  main .padreIndex {
+    margin-top: -390px;
+  }
 }
 @media (max-width: 400px) {
-  .padre {
-    margin-top: -50px;
+  main .padreIndex {
+    margin-top: -410px;
   }
 }
 .footer {
@@ -360,6 +381,36 @@ main .padre .baseTeorica ul {
   padding: 4px;
 }
 .padre__productos .producto button:hover {
+  background-color: rgba(255, 255, 255, 0.788);
+}
+.padre__productos .productoElectrico {
+  width: 450px;
+  height: 700px;
+}
+.padre__productos .productoElectrico img {
+  height: 500px;
+  width: 100%;
+}
+.padre__productos .productoElectrico .img__producto2 {
+  height: 350px;
+  width: 100%;
+}
+.padre__productos .productoElectrico h3 {
+  margin: 10px;
+  font-size: 30px;
+}
+.padre__productos .productoElectrico p {
+  margin: 10px;
+  font-size: 18px;
+}
+.padre__productos .productoElectrico button {
+  border: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 10px;
+  padding: 4px;
+}
+.padre__productos .productoElectrico button:hover {
   background-color: rgba(255, 255, 255, 0.788);
 }
 
@@ -516,6 +567,21 @@ iframe {
   width: 100%;
 }
 
+@media (max-width: 1390px) {
+  .caja p {
+    font-size: 15px;
+  }
+}
+@media (max-width: 1200px) {
+  .caja p {
+    font-size: 17px;
+  }
+}
+@media (max-width: 400px) {
+  .caja p {
+    font-size: 15px;
+  }
+}
 .formulario {
   padding: 30px;
   max-width: 1000px;
@@ -640,7 +706,7 @@ iframe {
   color: black;
 }
 
-.padre__productos .producto, .servicio {
+.padre__productos .producto, .padre__productos .productoElectrico, .servicio {
   border: solid 2px;
   border-radius: 8px;
   margin: 10px;

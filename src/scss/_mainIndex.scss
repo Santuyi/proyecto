@@ -1,9 +1,10 @@
 main{
     grid-area: main;
-    .padre{
+    .padreIndex{
         display: flex;
         justify-content: space-evenly;
-        margin: auto;   
+        margin: auto;
+        gap: 50px;  
         .baseTeorica{
             width: 300px;
             border: solid 2px;
@@ -87,22 +88,24 @@ main{
     .porqueTrabajarConmigo{
         flex-direction: column;
     }
-    .padre{
-        margin: auto;
-        margin-top: 60px;
-    }
-   
 }
-@media(max-width:800px){
-    /*main*/
+@media(max-width:980px){
     main{
-        .padre{
+        .padreIndex{
+            margin-top: -150px;
+        }
+    }
+}
+@media(max-width:900px){
+    main{
+        .padreIndex{
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: -150px;
             .baseTeorica{
                 height: 470px; 
-                margin-top: 80px;   
+                margin-top: 0;  
                 > h2{
                     font-size: 23px;
                     text-align: center;
@@ -113,6 +116,13 @@ main{
             }    
         }
     }
+}
+@media(max-width:860px){
+    .porqueTrabajarConmigo{
+        flex-direction: column;
+    }
+}
+@media(max-width:800px){
     .sobreMetalurgica{
         flex-direction: column;  
         img{
@@ -141,13 +151,11 @@ main{
         object-fit: cover;
     }
 }
-@media(max-width:860px){
-    .porqueTrabajarConmigo{
-        flex-direction: column;
-    }
-    .padre{
-        margin: auto;
-        margin-top: 50px;
+@media(max-width:760px){
+    main{
+        .padreIndex{
+            margin-top: -200px;
+        }
     }
 }
 @media(max-width:700px){
@@ -181,9 +189,30 @@ main{
     .tituloSobreMetalurgica{
         font-size: 25px;
     }
+    main{
+        .padreIndex{
+            margin-top: -250px;
+        }
+    }
 }  
-@media(max-width:400px){
-    .padre{
-        margin-top: -50px;
+@media(max-width:500px){
+    main{
+        .padreIndex{
+            margin-top: -300px;
+        }
     } 
+}
+@media(max-width:450px){
+    main{
+        .padreIndex{
+            margin-top: -390px;
+        }
+    } 
+}
+@media(max-width:400px){
+    main{
+        .padreIndex{
+            margin-top: -410px;
+        }
+    }
 }

@@ -4,7 +4,8 @@
     flex-direction: row;
     .producto{
         width: 450px;
-        @extend %tarjetaSyP;  
+        @extend %tarjetaSyP; 
+        
         img{
             height: 500px;
             width: 100%;
@@ -31,7 +32,38 @@
                 background-color: rgba(255, 255, 255, 0.788);
             }
         }
-    }    
+    } 
+    .productoElectrico{
+        width: 450px;
+        @extend %tarjetaSyP;  
+        height: 700px;
+        img{
+            height: 500px;
+            width: 100%;
+        } 
+        .img__producto2{
+            height: 350px;
+            width: 100%;
+        }
+        h3{
+            margin: 10px;
+            font-size: 30px;
+        }
+        p{
+            margin: 10px;
+            font-size: 18px;
+        }
+        button{
+            border: 0;
+            border-radius: 5px;
+            font-size: 18px;
+            margin: 10px;  
+            padding: 4px;
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.788);
+            }
+        }
+    }       
 }
 @media(max-width:1100px){
     .padre__productos{

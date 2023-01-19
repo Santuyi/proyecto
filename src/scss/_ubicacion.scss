@@ -7,3 +7,24 @@
 iframe{
     width: 100%;
 }
+@media(max-width:1390px){
+    .caja{
+        p{
+            font-size: 15px;
+        }
+    }
+}
+@media(max-width:1200px){
+    .caja{
+        p{
+            font-size: 17px;
+        }
+    }
+}
+@media(max-width:400px){
+    .caja{
+        p{
+            font-size: 15px;
+        }
+    }
+}
