@@ -353,65 +353,16 @@ main .padreIndex .baseTeorica ul {
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+  gap: 20px;
 }
-.padre__productos .producto {
-  width: 450px;
+.padre__productos .card {
+  width: 350px;
+  background-color: rgb(3, 47, 97);
+  color: white;
 }
-.padre__productos .producto img {
-  height: 500px;
-  width: 100%;
-}
-.padre__productos .producto .img__producto2 {
-  height: 350px;
-  width: 100%;
-}
-.padre__productos .producto h3 {
-  margin: 10px;
-  font-size: 30px;
-}
-.padre__productos .producto p {
-  margin: 10px;
-  font-size: 18px;
-}
-.padre__productos .producto button {
-  border: 0;
-  border-radius: 5px;
-  font-size: 18px;
-  margin: 10px;
-  padding: 4px;
-}
-.padre__productos .producto button:hover {
-  background-color: rgba(255, 255, 255, 0.788);
-}
-.padre__productos .productoElectrico {
-  width: 450px;
-  height: 700px;
-}
-.padre__productos .productoElectrico img {
-  height: 500px;
-  width: 100%;
-}
-.padre__productos .productoElectrico .img__producto2 {
-  height: 350px;
-  width: 100%;
-}
-.padre__productos .productoElectrico h3 {
-  margin: 10px;
-  font-size: 30px;
-}
-.padre__productos .productoElectrico p {
-  margin: 10px;
-  font-size: 18px;
-}
-.padre__productos .productoElectrico button {
-  border: 0;
-  border-radius: 5px;
-  font-size: 18px;
-  margin: 10px;
-  padding: 4px;
-}
-.padre__productos .productoElectrico button:hover {
-  background-color: rgba(255, 255, 255, 0.788);
+.padre__productos .card a {
+  background-color: white;
+  color: rgb(3, 47, 97);
 }
 
 @media (max-width: 1100px) {
@@ -421,42 +372,12 @@ main .padreIndex .baseTeorica ul {
     align-items: center;
   }
 }
-@media (max-width: 800px) {
-  .padre__productos .producto h3 {
-    font-size: 23px;
-  }
-  .padre__productos .producto p {
-    font-size: 18px;
-  }
-}
 @media (max-width: 450px) {
   .padre__productos {
     width: 300px;
     display: flex;
     flex-direction: column;
     width: 100%;
-  }
-  .padre__productos .producto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 350px;
-    align-items: center;
-  }
-  .padre__productos .producto img {
-    height: 400px;
-    width: 100%;
-    margin: auto;
-  }
-  .padre__productos .producto .img__producto2 {
-    height: 250px;
-    width: 100%;
-  }
-  .padre__productos .producto h3 {
-    font-size: 18px;
-  }
-  .padre__productos .producto p {
-    font-size: 14px;
   }
 }
 .desc__productos {
@@ -509,10 +430,6 @@ main .padreIndex .baseTeorica ul {
     height: 500px;
   }
 }
-.servicio {
-  width: 400px;
-  overflow: hidden;
-}
 .servicio img {
   height: 350px;
   width: 100%;
@@ -561,25 +478,16 @@ main .padreIndex .baseTeorica ul {
 }
 .caja p {
   padding: 5px;
+  text-align: center;
 }
 
 iframe {
   width: 100%;
 }
 
-@media (max-width: 1390px) {
+@media (max-width: 1438px) {
   .caja p {
-    font-size: 15px;
-  }
-}
-@media (max-width: 1200px) {
-  .caja p {
-    font-size: 17px;
-  }
-}
-@media (max-width: 400px) {
-  .caja p {
-    font-size: 15px;
+    font-size: 14px;
   }
 }
 .formulario {
@@ -706,7 +614,9 @@ iframe {
   color: black;
 }
 
-.padre__productos .producto, .padre__productos .productoElectrico, .servicio {
+.servicio {
+  width: 400px;
+  overflow: hidden;
   border: solid 2px;
   border-radius: 8px;
   margin: 10px;

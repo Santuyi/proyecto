@@ -1,7 +1,5 @@
 .servicio{
-    width: 400px;
-    overflow: hidden;
-    @extend %tarjetaSyP;
+    @extend %tarjetaServicio;
     img{
         height: 350px;
         width: 100%;  
