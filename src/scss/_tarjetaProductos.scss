@@ -11,6 +11,12 @@
             background-color: $colorSecundario;
             color: $colorPrincipal;
         }
+        .btn{
+            &:hover{
+                background-color: rgba(255, 255, 255, 0.769);
+                color: rgba(0, 0, 0, 0.996);
+            }
+        }
     }    
 }
 @media(max-width:1100px){

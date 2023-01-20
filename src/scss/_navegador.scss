@@ -19,6 +19,10 @@
             color: $colorSecundario;
             text-decoration: none;
             padding: 30px;
+            &:hover{
+                color: rgba(255, 255, 255, 0.662);
+                font-size: 17px;
+            }
         }
     }
 }
@@ -29,6 +33,7 @@
 @media(max-width:831px){
     .navegador{
         justify-content: space-between;
+        z-index: 9999;
     }
     .navegador .fa-bars{
         display: block;
@@ -44,13 +49,13 @@
         flex-direction: column;
         background-color: $colorPrincipal;
         width: 250px;
-        height: 100vh;
+        height: 100%;
         justify-content: start;
         padding-top: 60px ;
         align-items: center;
         left: -300px;
         transition: 0.2s;
-        z-index: 1px;
+        z-index: 9999;
     }
     .navegador ul:hover{
         left: 0;
