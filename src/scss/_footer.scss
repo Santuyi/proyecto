@@ -15,7 +15,10 @@
             padding: 20px;
         }
         ul li a{
-            color: $colorSecundario;    
+            color: $colorSecundario; 
+            &:hover{
+                color: rgb(134, 132, 132);
+            }   
         }
         li{
             padding: 5px;
@@ -28,6 +31,10 @@
         ul a{
             color: $colorSecundario;
             text-decoration: none;
+            &:hover{
+                color: rgb(137, 135, 135);
+                font-size: 18px; 
+            }
         }
         li{
             padding: 5px;

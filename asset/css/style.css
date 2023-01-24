@@ -337,6 +337,9 @@ main .padreIndex .baseTeorica ul {
 .footer .accesos ul li a {
   color: white;
 }
+.footer .accesos ul li a:hover {
+  color: rgb(134, 132, 132);
+}
 .footer .accesos li {
   padding: 5px;
   font-size: 14px;
@@ -348,6 +351,10 @@ main .padreIndex .baseTeorica ul {
 .footer .descFooter ul a {
   color: white;
   text-decoration: none;
+}
+.footer .descFooter ul a:hover {
+  color: rgb(137, 135, 135);
+  font-size: 18px;
 }
 .footer .descFooter li {
   padding: 5px;
