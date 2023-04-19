@@ -1,4 +1,4 @@
-let bienvenido = prompt("Bienvenido, ingrese su nombre: ");
+ /*  let bienvenido = prompt("Bienvenido, ingrese su nombre: ");
 
 if(bienvenido === ""){
     alert("Ingrese su nombre porfavor");
@@ -29,14 +29,14 @@ function sumaProducto2y3(p1,p2,p3){
     return p2 + p3 + p1;
 }
 
-console.log("PRODUCTOS ELECTRICOS Y TANQUES AEREOS");
-console.log(sumaProducto1y2(30000,200000));
-console.log("PRODUCTOS ELECTRICOS Y CAJON DE HERRAMIENTAS");
-console.log(sumaProducto1y3(30000,60000));
-console.log("TANQUES AEREOS Y CAJON DE HERRAMIENTAS");
-console.log(sumaProducto2y3(200000,60000));
-console.log("PRODUCTOS ELECTRICOS, TANQUES AEREOS Y CAJON DE HERRAMIENTAS");
-console.log(sumaProducto2y3(30000,200000, 60000));
+alert("PRODUCTOS ELECTRICOS Y TANQUES AEREOS");
+alert(sumaProducto1y2(30000,200000));
+alert("PRODUCTOS ELECTRICOS Y CAJON DE HERRAMIENTAS");
+alert(sumaProducto1y3(30000,60000));
+alert("TANQUES AEREOS Y CAJON DE HERRAMIENTAS");
+alert(sumaProducto2y3(200000,60000));
+alert("PRODUCTOS ELECTRICOS, TANQUES AEREOS Y CAJON DE HERRAMIENTAS");
+alert(sumaProducto2y3(30000,200000, 60000));
 
 alert("Esto no termina aca!! Tenemos algo nuevo para vos")
 
@@ -58,9 +58,9 @@ const torcha = {
     precio: 10000,
 }
 
-console.log(pico);
-console.log(mascara);
-console.log(torcha);
+console.log();(pico);
+console.log();(mascara);
+console.log();(torcha);
 
 console.log("Aqui abajo te mostraremos los diferentes tipos de picos que tenemos en stock")
 
@@ -92,13 +92,13 @@ function ventasPicos(){
     
     if(ventaPico == "1"){
         let ventaPico1 = pico1.vender(prompt("Cuantos picos va a llevar? Ingrese un numero porfavor (tenga en claro el stock disponible)."))
-        console.log("El precio es " + ventaPico1); 
+        alert("El precio es " + ventaPico1); 
     }else if(ventaPico == "2"){
         let ventaPico2 = pico2.vender(prompt("Cuantos picos va a llevar? Ingrese un numero porfavor (tenga en claro el stock disponible)."))
-        console.log("El precio es " + ventaPico2); 
+        alert("El precio es " + ventaPico2); 
     }else if (ventaPico == "3"){
         let ventaPico3 = pico3.vender(prompt("Cuantos picos va a llevar? Ingrese un numero porfavor (tenga en claro el stock disponible)."))
-        console.log("El precio es " + ventaPico3); 
+        alert("El precio es " + ventaPico3); 
     }else{
         alert("Gracias")
     }
@@ -143,4 +143,35 @@ while (productos.some( (el)=>{return el.nombre === ingresaProducto;} )) {
     carrito.push(encontrado);
     console.log(carrito); 
     ingresaProducto = prompt("Ingrese que producto (ingresa bien el nombre) quiere llevar y sera agregado al carrito. \n Cuando termines de agregar los productos al carrito, pone listo.");
-}
+}  */
+// const titulo = document.getElementById("titulo") LLAMAR AL ID TITULO
+
+// const lista = document.getElementsByClassName("lista") LLAMAR A LA CLASE LISTA
+// lista[1].className="box" SE LE APLICA LA CLASE DE CSS
+
+// console.log(titulo,innerText) ACCEDE AL TEXTO(es decir representa la etiqueta completa)
+// console.log(titulo,innerHTML) ACCEDE AL TODO AL TEXTO COMPLETO(es decir representa el contenido)
+
+// const li = document.getElementsByTagName("li") NOMBRE DE ETIQUETA
+
+// const inputs = document.querySelectorAll('input[type="text"]) ME TRAE TODOS LOS INPUTS DE TIPO TEXTO
+// const inputs = document.querySelectorAll('input[type="text"].entrada) ME TRAE TODOS LOS INPUTS DE TIPO TEXTO QUE TENGA UNA CLASE ENTRADA
+
+//btnSearch.addEventListener('click',()=>{alert("respuesta al evento click")}) CUANDO HACE CLICK EN EL BOTON SALE EL ALERT
+
+// const caja = document.querySelector(".caja") selecciona la clase caja y si es con numeral en ves de punto, selecciona un id
+// const mensaje = document.querySelector("p#pais") selecciona de la etiqueta p el id pais
+// caja.addEventListener('mousedown', ()=>{console.log("presionaste boton")})
+// caja.addEventListener('mouseup', ()=>{console.log("soltaste boton")})
+// caja.addEventListener('mouseover', ()=>{console.log("efecto over")})
+// caja.addEventListener('mouseleave', ()=>{console.log("efecto over salida")})
+
+// const inputEdad= inputs[2]
+// inputEdad.addEventListener{'change', ()=>{console.log("cambia de lugar cuando apretas el enter, es como si apretaras el tab")}}
+
+// const selectPaises = document.querySelector('#paises')
+// selectPaises.addEventListener('change', ()=> {let option=selectPaises.options[selectPaises.selectedIndex].value 
+//console.log(option)}) SELECCIONA EL PAIS Y LO MANDA POR CONSOLA 
+  
+//inputIngreso.addEventListener('input',()=>{const encontrado=buscarServicio(servicios, inputIngreso.value)
+//console.log(encontrado)}) EN UNA BUSQUEDA ME SALTA EN LA CONSOLA LOS ELEMENTOS QUE ESTOY BUSCANDO

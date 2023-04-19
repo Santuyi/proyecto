@@ -1,52 +1,19 @@
-.tituloPaginas{
-    @extend %tituloPaginas;
+.wrapper{
+   display: grid;
+   grid-template-columns: 1fr 4fr;
+   background-color: aqua; 
 }
-.desc__productos{
-    width: 100%;
-    height: 250px;
-    margin-bottom: 150px;
-    margin-top: 50px;
-    padding: 50px;
-    font-size: 20px;
-    background-color:  $colorPrincipal;
-    color: $colorSecundario;  
+aside{
+    padding: 2rem;
+    color: white;
+    position: sticky;
+    height: 100vh;
+    top: 0;
 }
-@media(max-width:1100px){
-    .desc__productos{
-        padding: 30px;
-    }
+
+.logo-carrito{
+    font-weight: 400;
+    font-size: 1.3rem ;
+    
 }
-@media(max-width:800px){
-    .tituloPaginas{
-        font-size: 25px;
-    }
-    .desc__productos{
-        font-size: 18px;
-        padding: 30px;
-    }
-}    
-@media(max-width:650px){
-    .desc__productos{
-        height: 300px;
-    }
-}
-@media(max-width:530px){
-    .desc__productos{
-        height: 350px;
-    }
-}
-@media(max-width:470px){
-    .desc__productos{
-        height: 400px;
-    }
-}
-@media(max-width:430px){
-    .desc__productos{
-        height: 450px;
-    }
-}
-@media(max-width:390px){
-    .desc__productos{
-        height: 500px;
-    }
-}
+

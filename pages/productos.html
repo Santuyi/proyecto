@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../asset/css/style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 <body>
@@ -20,44 +21,72 @@
             <li><a href="./servicios.html">SERVICIOS</a></li>
             <li><a href="./ubicacion.html">UBICACIÓN</a></li>
             <li><a href="./contacto.html">CONTACTO</a></li>
+            <li>
+                <a class="boton-carrito" href="./carrito.html"><i class="bi bi-cart-fill"></i>CARRITO <span class="numerito">0</a>
+            </li>
         </ul>
         <img class="logo" src="../asset/img/logoEmpresa.jpeg" alt="Imagen Logo">
     </nav>
 
-    <main>
-        <div>
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h2 class="logo">Shop</h2>
+            </header>
+            <nav>
+                <ul>
+                    <li>
+                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Todos los productos</button>
+
+                    </li>
+                    <li>
+                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Productos Metalurgica</button>
+                        
+                    </li>
+                    <li>
+                        <button class="boton-menu boton-categoria active"><i class="bi bi-hand-index-thumb-fill"></i> Productos Electricos</button>
+                        
+                    </li>
+                    <li>
+                        <a href="./carrito.html" class="boton-menu boton-carrito"> <i class="bi bi-cart-fill"></i>Carrito <span class="numerito">0</span></a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="texto-footer">METALURGICA GOMEZ and CES.SOLDAR </p>
+            </footer>
+        </aside>
+        <main>
             <h1 class="tituloPaginas">PRODUCTOS</h1>
-            <div class="desc__productos">
-            <p>Nuestra empresa ofrece la fabricación de una diversa gama de productos relacionados con el corte y plegado de chapa en su variedad de medidas, disponemos de ese equipamiento también para reparaciones de maquinarias agrícolas y finalmente para la fabricación de tanques para almacenar combustible. También nos dedicamos a la fabricación y montaje de tinglados de chapa, galpones y techos. Además, les ofrecemos a nuestros clientes el mantenimiento de equipos eléctricos y la fabricación de accesorios eléctricos para su negocio o para el campo.</p>
-            </div>
-        </div>
-        <div class="padre__productos" data-aos="zoom-out-down">
-            <div class="card">
-                <img src="../asset/img/imgProducto1.jpeg" class="card-img-top" alt="Producto Electrico">
-                <div class="card-body">
-                <h5 class="card-title">PRODUCTOS ELECTRICOS </h5>
-                <p class="card-text">Fabricación de accesorios eléctricos y tableros de comando eléctrico para el campo o la industria.</p>
-                <a href="https://www.instagram.com/p/CjLZSaxORLh/?igshid=YmMyMTA2M2Y=" class="btn btn-primary">Ver Producto</a>
+            <div class="contenedor-productos" >
+                <div class="producto">
+                    <img src="../asset/img/imgProducto1.jpeg" class="producto-imagen" alt="Producto Electrico">
+                    <div class="producto-detalles">
+                        <h5 class="producto-titulo">PRODUCTOS ELECTRICOS </h5>
+                        <p class="producto-precio">$50000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
+                </div>
+                <div class="producto" >
+                    <img src="../asset/img/imgProducto2.jpeg" class="producto-imagen" alt="Producto Tanque">
+                    <div class="producto-detalles">
+                        <h5 class="producto-titulo">TANQUES AEREOS </h5>
+                        <p class="producto-precio">$500000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
+                </div>
+                <div class="producto" >
+                    <img src="../asset/img/imgProducto3.jpeg" class="producto-imagen" alt="Producto Cajon">
+                    <div class="producto-detalles" >
+                        <h5 class="producto-titulo">CAJON DE HERRAMIENTAS </h5>
+                        <p class="producto-precio">$200000</p>
+                        <button class="producto-agregar">Agregar</button>
+                    </div>
                 </div>
             </div>
-            <div class="card" data-aos="zoom-out-down">
-                <img src="../asset/img/imgProducto2.jpeg" class="card-img-top" alt="Producto Tanque">
-                <div class="card-body">
-                <h5 class="card-title">TANQUES AEREOS </h5>
-                <p class="card-text">Ofrecemos tanques para almacenamiento de liquidos, fabricados estandar o a medida para posicionarlo horizontal o vertical.</p>
-                <a href="https://www.instagram.com/p/Ck3HCAuOBS6/?igshid=YmMyMTA2M2Y=" class="btn btn-primary">Ver Producto</a>
-                </div>
-            </div>
-            <div class="card" data-aos="zoom-out-down">
-                <img src="../asset/img/imgProducto3.jpeg" class="card-img-top" alt="Producto Cajon">
-                <div class="card-body">
-                <h5 class="card-title">CAJON DE HERRAMIENTAS</h5>
-                <p class="card-text">Nuestro equipo de plegado permite realizar piezas complejas y precisas en forma rápida y agil.</p>
-                <a href="https://www.instagram.com/p/CjbfniqJXoG/?igshid=YmMyMTA2M2Y=" class="btn btn-primary">Ver Producto</a>
-                </div>
-            </div>
-        </div>
-    </main>
+        </main>
+    </div>
+    
 
     <footer class="footer">
         <div class="accesos">
