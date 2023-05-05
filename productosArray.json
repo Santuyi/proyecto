@@ -1,0 +1,32 @@
+[
+    {
+    "id": "productosElectricos-01",
+    "titulo": "PRODUCTOS ELECTRICOS",
+    "imagen": "../asset/img/imgProducto1.jpeg",
+    "categoria":{
+        "nombre":"Productos Electricos",
+        "id": "productosElectricos"
+    },
+    "precio": "1000"
+},
+{
+    "id": "productosMetalurgica-01",
+    "titulo": "TANQUES AEREOS",
+    "imagen": "../asset/img/imgProducto2.jpeg",
+    "categoria":{
+        "nombre":"Productos de Metalurgica",
+        "id": "productosMetalurgica"
+    },
+    "precio": "1000"
+},
+{
+    "id": "productosMetalurgica-02",
+    "titulo": "CAJON DE HERRAMIENTAS",
+    "imagen": "../asset/img/imgProducto3.jpeg",
+    "categoria":{
+        "nombre":"Productos de Metalurgica",
+        "id": "productosMetalurgica"
+    },
+    "precio": "1000"
+}
+]

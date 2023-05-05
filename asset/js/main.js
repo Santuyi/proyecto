@@ -1,35 +1,11 @@
-const productosArray = [
-    {
-    id: "productosElectricos-01",
-    titulo: "PRODUCTOS ELECTRICOS",
-    imagen: "../asset/img/imgProducto1.jpeg",
-    categoria:{
-        nombre:"Productos Electricos",
-        id: "productosElectricos"
-    },
-    precio: "1000"
-},
-{
-    id: "productosMetalurgica-01",
-    titulo: "TANQUES AEREOS",
-    imagen: "../asset/img/imgProducto2.jpeg",
-    categoria:{
-        nombre:"Productos de Metalurgica",
-        id: "productosMetalurgica"
-    },
-    precio: "1000"
-},
-{
-    id: "productosMetalurgica-02",
-    titulo: "CAJON DE HERRAMIENTAS",
-    imagen: "../asset/img/imgProducto3.jpeg",
-    categoria:{
-        nombre:"Productos de Metalurgica",
-        id: "productosMetalurgica"
-    },
-    precio: "1000"
-}
-]
+let productosArray = []
+
+fetch("../productosArray.json")
+    .then(response => response.json())
+    .then(data => {
+        productosArray = data;
+        cargarProductos(productosArray);
+    })
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
 const botonesCategorias= document.querySelectorAll(".boton-categoria");
@@ -37,16 +13,12 @@ const tituloPrincipal = document.querySelector("#titulo-principal");
 let botonesAgregar = document.querySelectorAll(".producto-agregar");
 const numerito= document.querySelector("#numerito")
 
-
-
-
 function cargarProductos(productosElegidos){
     contenedorProductos.innerHTML = ""
     productosElegidos.forEach(producto =>{
         const div= document.createElement("div");
         div.classList.add("producto");
         div.innerHTML= `
-        
         <img  class="producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
         <div class="producto-detalles">
             <h5 class="producto-titulo">${producto.titulo}</h5>
@@ -58,8 +30,6 @@ function cargarProductos(productosElegidos){
     })
     actualizarBotonesAgregar()
 }
-
-cargarProductos(productosArray);
 
 botonesCategorias.forEach(boton =>{
     boton.addEventListener("click", (e) =>{
@@ -85,9 +55,33 @@ function actualizarBotonesAgregar(){
     })
 }
 
-const productosEnCarrito = []
+let productosEnCarrito;
+
+let productosEnCarritoLS = localStorage.getItem("productos-en-carrito")
+
+if(productosEnCarritoLS){
+   productosEnCarrito = JSON.parse(productosEnCarritoLS);
+   actualizarNumerito();
+}else{
+productosEnCarrito = []
+}
 
 function agregarAlCarrito(e) {
+    Toastify({
+        text: "producto agregado",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          borderRadius: "2rem",
+          background: "linear-gradient(to right, rgb(5, 58, 120), rgb(26, 55, 201))",
+          textTransform: "uppercase",
+          fontSize: ".75rem"
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     const idBoton = e.currentTarget.id;
     const productoAgregado = productosArray.find(producto => producto.id === idBoton);
     if (productosEnCarrito.some(producto => producto.id === idBoton)) {
@@ -98,7 +92,7 @@ function agregarAlCarrito(e) {
         productosEnCarrito.push(productoAgregado);
     }
     actualizarNumerito()
-    localStorage.setItem("productos-en-carrito", JSON)
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
 }
 
 function actualizarNumerito(){
