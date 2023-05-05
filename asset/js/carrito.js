@@ -9,7 +9,7 @@ let botonesEliminar = document.querySelectorAll("#carrito-producto-eliminar")
 const botonVaciar = document.querySelector("#carrito-acciones-vaciar")
 const botonComprar = document.querySelector("#carrito-acciones-comprar")
 const contenedorTotal = document.querySelector("#total")
-
+const procesarCompra = document.querySelector("#carrito-acciones-comprar")
 
 function cargarProductosCarrito(){
 if(productosEnCarrito && productosEnCarrito.length > 0){

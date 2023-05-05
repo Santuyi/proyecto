@@ -781,7 +781,7 @@ iframe {
 .carrito-producto {
   display: flex;
   justify-content: space-between;
-  background-color: grey;
+  background-color: rgb(209, 206, 206);
   padding: 0.5rem;
   padding-right: 0.5rem;
   border-radius: 1rem;
@@ -812,7 +812,7 @@ iframe {
 
 .carrito-acciones-vaciar {
   border: 0;
-  background-color: gray;
+  background-color: rgb(209, 206, 206);
   padding: 1rem;
   border-radius: 1rem;
   color: rgb(26, 55, 201);
@@ -826,7 +826,7 @@ iframe {
 
 .carrito-acciones-total {
   display: flex;
-  background-color: gray;
+  background-color: rgb(209, 206, 206);
   padding: 1rem;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -847,4 +847,8 @@ iframe {
 
 .disabled {
   display: none;
+}
+
+.carrito-producto-titulo h3 {
+  font-size: 1rem;
 }
